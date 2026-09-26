@@ -1,0 +1,13 @@
+# Lokální vývojový profil - aktivovat přes SPRING_PROFILES_ACTIVE=local (nebo v IDE run konfiguraci).
+# Neobsahuje žádná tajemství - skutečné hodnoty (GOOGLE_CLIENT_ID/SECRET, MYSQL_PASSWORD, ...)
+# se nastavují jako proměnné prostředí, viz .env.example.
+
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: lax
+        secure: false
+
+app:
+  frontend-url: http://localhost:5173
